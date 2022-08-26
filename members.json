@@ -1,0 +1,29 @@
+{
+  "members": [
+    {
+      "name": "Raul",
+      "age": 22,
+      "height": 1.8
+    },
+    {
+      "name": "Marta",
+      "age": 15,
+      "height": 1.5
+    },
+    {
+      "name": "Ana",
+      "age": 33,
+      "height": 1.76
+    },
+    {
+      "name": "Antonio",
+      "age": 30,
+      "height": 1.96
+    },
+    {
+      "name": "Juan",
+      "age": 30,
+      "height": 1.73
+    }
+  ]
+}

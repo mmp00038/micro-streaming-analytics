@@ -17,9 +17,10 @@ public class StatisticsSender {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    @Scheduled(fixedDelay = 3000L)
     public void sendStatistics() {
-        rabbitTemplate.convertAndSend(MicrostreaminganalyticsApplication.EXCHANGE_NAME, MicrostreaminganalyticsApplication.ROUTING_KEY, CalculateStatistics.getJsonStatistics());
+        Statistics statistics = CalculateStatistics.getJsonStatistics();
+        rabbitTemplate.convertAndSend(MicrostreaminganalyticsApplication.EXCHANGE_NAME, MicrostreaminganalyticsApplication.ROUTING_KEY, statistics);
         log.info("Statistics sender");
+        ImportJsonService.importTo("prueba", statistics);
     }
 }
